@@ -15,25 +15,25 @@ options = dlib.shape_predictor_training_options()
 
 # depth of the regression tree -- there will be a total of 
 # 2^tree_depth leaves in the tree
-options.tree_depth = 4
+options.tree_depth = 2
 
 # regularization parameter
-options.nu = 0.1
+options.nu = 0.25
 
 # the number of cascades used to train the shape predictor 
-options.cascade_depth = 15
+options.cascade_depth = 12
 
 # number of pixel used to generate features for the random trees at each cascade
-options.feature_pool_size = 400
+options.feature_pool_size = 500
 
 # selects best features at each cascade when training
-options.num_test_splits = 50
+options.num_test_splits = 20
 
 # controls the amount of jitter
-options.oversampling_amount = 5
+options.oversampling_amount = 20
 
 # amount of translation jitter to apply
-options.oversampling_translation_jitter = 0.1
+options.oversampling_translation_jitter = 0
 
 # tell the dlib shape predictor to be verbose and print out status
 # messages the model trains
